@@ -5,7 +5,8 @@ on: [push]
 jobs:
   bump_version:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Prepare environment - check out the repository
         uses: actions/checkout@v6
